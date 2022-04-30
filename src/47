@@ -1,0 +1,45 @@
+[Leetcode Link](https://leetcode.com/problems/permutations-ii/)
+
+Explain:
+This question is very similar to [46. Permutations](https://leetcode.com/problems/permutations/)
+We still use the template for backtracking but we need to keep track of two values:
+  1. The indexes that are already used in previous layers
+  2. The values that are already used in the current layer (prevent same values from appearing again in the same position)
+for 1. the used_index array should be declared outside of the backtracking function to be shared among different layers
+for 2. the used_num array should be declared within the backtracking function to be only available to the current layer 
+so that the same values do not appear in the same position.
+
+Solution:
+```
+class Solution {
+public:    
+    vector<vector<int>> result;
+    vector<int> path;
+    //used to keep track of elements used by previous levels
+    int used_index[8]={0};
+    
+    void helper(vector<int> nums){
+        if(path.size()==nums.size()){
+            result.push_back(path);
+            return;
+        }
+        //make sure no duplicates in the same position at current level
+        int used_num[21]={0};
+        for(int i=0; i<nums.size(); i++){
+            if(used_num[nums[i]+10]==0&&used_index[i]==0){
+                used_num[nums[i]+10]=1;
+                used_index[i]=1;
+                path.push_back(nums[i]);
+                helper(nums);
+                path.pop_back();
+                used_index[i]=0;
+            }
+        }
+    }
+    
+    vector<vector<int>> permuteUnique(vector<int>& nums) {
+        helper(nums);
+        return result;
+    }
+};
+```
