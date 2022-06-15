@@ -11,4 +11,5 @@ Notes for a few leetcode problems
 [122. Best Time to Buy and Sell Stock II](/src/122.md)
 
 ## TopoLogical Sort
+[207. Course Schedule](/src/207.md)
 [210. Course Schedule II](/src/210.md)
