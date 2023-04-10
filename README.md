@@ -1,12 +1,12 @@
 # Leetcode_Notes
 Notes for a few leetcode problems  
 
-## two pointers ##
-[15. 3Sum](/src/15.md)
+## Two Pointers ##
+[15. 3Sum](/src/15.md)  
 [18. 4Sum](/src/18.md)
 
 ## Backtracking
-[47. Permutations II](/src/47.md)
+[47. Permutations II](/src/47.md)  
 
 ## Greedy Algorithms
 **Brain teaser sort of???**  
