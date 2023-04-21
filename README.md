@@ -1,5 +1,5 @@
 # Leetcode_Notes
-Notes for a few leetcode problems  
+Notes for a few typical leetcode problems
 
 ## Two Pointers ##
 [15. 3Sum](/src/15.md)  
